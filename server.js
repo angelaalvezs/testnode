@@ -48,5 +48,5 @@ io.on('connection', (socket) => {
 });
 
 server.listen(port, () => {
-    console.log('localhost:3000');
+    console.log("RUNNING: " + port);
 });
