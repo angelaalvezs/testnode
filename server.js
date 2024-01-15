@@ -5,7 +5,7 @@ const msgpackr = require('msgpackr');
 
 const app = express();
 const server = http.createServer(app);
-
+const port = process.env.PORT || 3000;
 // Configuração para servir arquivos estáticos (como seu arquivo HTML)
 app.use(express.static(__dirname + '/public'));
 
@@ -47,6 +47,6 @@ io.on('connection', (socket) => {
     });
 });
 
-server.listen(3000, () => {
+server.listen(port, () => {
     console.log('localhost:3000');
 });
